@@ -35,8 +35,6 @@ crosschildren = crossover(elite,n,m);
 pop((1+(m/10)):(9*m/10),:) = crosschildren;
 
 %% Mutations
-% mutchildren = mutate(pop(1:40,:),n);
-% pop(41:50,:) = mutchildren;
 pop((1+(9*m/10)):m,:) = popgen(n,(m/10));
 
 %% Repeat Fitness Evaluation, Crossover and Mutations
@@ -49,8 +47,6 @@ for i=1:n-1
     pop(1:(m/10),:) = elite;
     crosschildren = crossover(elite,n,m);
     pop((1+(m/10)):(9*m/10),:) = crosschildren;
-%     mutchildren = mutate(pop(1:40,:),n);
-%     pop(41:50,:) = mutchildren;
     pop((1+(9*m/10)):m,:) = popgen(n,(m/10));
 end;
 
