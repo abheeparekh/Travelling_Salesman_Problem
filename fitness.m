@@ -14,25 +14,6 @@ for j=1:m
     distance = distance + d(t,s);
     table(j) = distance;
 end;
-% display('Fitness values');
-% display(table);
-
-%[M1,I] = min(table);
-% k1=1;
-% min=table(1,2);
-% for i=1:n
-%     
-%         if(min>table(i,2))
-%             min=table(i,2);
-%             k1=i;
-%         end
-%     
-% end
-% k1;
-% d1=table(k1,2);
-% [d1,k1] = min(table, [], 1);
-% display('Fittest chromosome');
-% fc1 = pop(k1,:);
 
 [fitvalue,I]= sort(table);
 table = [fitvalue I];
